@@ -6,11 +6,17 @@ A collection of purpose-built scrapers for harvesting social media and news inte
 
 ---
 
-## Why This Exists
+## 📋 Quick Summary
+
+> 🕵️ **Social Intelligence Pipeline** 是一套專為社群媒體與新聞情報採集打造的反偵測爬蟲系統。🛡️ 核心技術包含瀏覽器指紋偽裝、WebDriver 隱藏、真人行為模擬（隨機延遲與漸進式滾動），讓平台無法辨識自動化操作。🐦 支援 X/Twitter 的個人檔案與推文時間軸擷取（瀏覽器模式＋官方 API v2 雙軌並行），同時整合 BlockTempo、ABMedia、Blockcast 等多家加密貨幣新聞網站的全站爬取。🔍 內建關鍵字過濾引擎，可針對 BTC、Bitcoin、Elon Musk 等熱門關鍵字精準篩選。📅 支援日期範圍定向採集與歷史資料回補，長時間任務可中斷續爬。🧰 技術棧以 Python + Playwright（非同步 API）為核心，搭配 Requests 處理 API 路徑，所有結果以結構化 JSON 輸出。🎯 適合需要大規模、持續性社群輿情監控與新聞聚合的研究人員與分析師。
+
+---
+
+## 🔍 Why This Exists
 
 Platforms like X (Twitter) and major news outlets aggressively detect and block automated access. Traditional scraping breaks within minutes. This pipeline uses anti-fingerprinting techniques, human-like browsing patterns, and persistent browser sessions to collect social intelligence data reliably over extended periods -- covering both social media profiles and multi-site news aggregation.
 
-## Architecture
+## 🏗️ Architecture
 
 ```
                     Social Intelligence Pipeline
@@ -38,7 +44,7 @@ Platforms like X (Twitter) and major news outlets aggressively detect and block 
   +------------------+
 ```
 
-### How It Works
+### ⚙️ How It Works
 
 **X/Twitter Browser Collection (`scraper.py`)**
 - Launches a persistent Chromium context that preserves login state across sessions.
@@ -58,7 +64,7 @@ Platforms like X (Twitter) and major news outlets aggressively detect and block 
 - Date-range targeting and full historical backfill capabilities.
 - Resumable sessions for long-running collection jobs.
 
-### Anti-Detection Techniques
+### 🛡️ Anti-Detection Techniques
 
 | Technique | Implementation |
 |-----------|---------------|
@@ -68,7 +74,7 @@ Platforms like X (Twitter) and major news outlets aggressively detect and block 
 | Persistent sessions | `launch_persistent_context` with stored browser data |
 | Human-like behavior | Randomized delays, progressive scroll loading |
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Language**: Python 3.8+
 - **Browser Automation**: Playwright (async API)
@@ -76,7 +82,7 @@ Platforms like X (Twitter) and major news outlets aggressively detect and block 
 - **Async Runtime**: asyncio
 - **Configuration**: python-dotenv
 
-## Quick Start
+## 🏁 Quick Start
 
 ```bash
 # Create virtual environment
@@ -106,7 +112,7 @@ python scrape_search_keywords.py
 python scrape_multi_sites_history.py
 ```
 
-### Output Format
+### 📤 Output Format
 
 Data is saved as structured JSON in the `output/` directory:
 
@@ -131,7 +137,7 @@ Data is saved as structured JSON in the `output/` directory:
 }
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 social-intelligence-pipeline/
