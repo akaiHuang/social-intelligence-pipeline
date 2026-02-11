@@ -10,6 +10,10 @@ A collection of purpose-built scrapers for harvesting social media and news inte
 
 Social Intelligence Pipeline 是一套面向社群與新聞情報採集的反偵測爬蟲工具集，強調可規模化與平台對抗能力。適合用於 OSINT、輿情監測與資料研究的採集端建置，將多來源訊號整合為可分析的資料集。
 
+## About (EN)
+
+Social Intelligence Pipeline is an anti-detection scraping toolkit for social and news intelligence collection. It is built for scalable OSINT-style ingestion and downstream analytics pipelines.
+
 ## 📋 Quick Summary
 
 > 🕵️ **Social Intelligence Pipeline** 是一套專為社群媒體與新聞情報採集打造的反偵測爬蟲系統。🛡️ 核心技術包含瀏覽器指紋偽裝、WebDriver 隱藏、真人行為模擬（隨機延遲與漸進式滾動），讓平台無法辨識自動化操作。🐦 支援 X/Twitter 的個人檔案與推文時間軸擷取（瀏覽器模式＋官方 API v2 雙軌並行），同時整合 BlockTempo、ABMedia、Blockcast 等多家加密貨幣新聞網站的全站爬取。🔍 內建關鍵字過濾引擎，可針對 BTC、Bitcoin、Elon Musk 等熱門關鍵字精準篩選。📅 支援日期範圍定向採集與歷史資料回補，長時間任務可中斷續爬。🧰 技術棧以 Python + Playwright（非同步 API）為核心，搭配 Requests 處理 API 路徑，所有結果以結構化 JSON 輸出。🎯 適合需要大規模、持續性社群輿情監控與新聞聚合的研究人員與分析師。
